@@ -45,7 +45,7 @@ LABEL summary="$SUMMARY" \
 RUN INSTALL_PKGS="python36 python36-devel python3-setuptools python3-pip python3-virtualenv \
         nss_wrapper httpd httpd-devel mod_ssl mod_auth_gssapi \
         mod_ldap mod_session atlas-devel gcc-gfortran libffi-devel \
-        libtool-ltdl enchant" && \
+        libtool-ltdl enchant libXrender.x86_64 libXrender-devel.x86_64" && \
     yum -y module enable python36:3.6 httpd:2.4 && \
     yum -y --setopt=tsflags=nodocs install $INSTALL_PKGS && \
     rpm -V $INSTALL_PKGS && \
